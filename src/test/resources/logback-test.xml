@@ -6,6 +6,10 @@
 		</encoder>
 	</appender>
 
+	<logger name="org.springframework">
+		<level value="WARN" />
+	</logger>
+
 	<logger name="de.fred4jupiter.function.uppercase">
 		<level value="DEBUG" />
 	</logger>
