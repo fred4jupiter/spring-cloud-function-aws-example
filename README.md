@@ -14,3 +14,13 @@ Under Basic Settings use this:
 
 - Memory: 192 MB
 - Timeout: 1 min
+
+## Test request
+
+You can use something like that as test request:
+
+```json
+{
+  "input": "Hello World!"
+}
+```
