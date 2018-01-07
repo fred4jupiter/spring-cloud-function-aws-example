@@ -2,8 +2,6 @@ package de.fred4jupiter.function.uppercase.functions;
 
 import java.util.function.Function;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +10,8 @@ import de.fred4jupiter.function.uppercase.service.UppercaseService;
 @Component("uppercaseFunction")
 public class UppercaseFunction implements Function<UppercaseRequest, UppercaseResponse> {
 
-	private static final Logger logger = LoggerFactory.getLogger(UppercaseFunction.class);
+	private static final org.apache.logging.log4j.Logger logger = org.apache.logging.log4j.LogManager
+			.getLogger(UppercaseFunction.class);
 
 	private final UppercaseService uppercaseService;
 
