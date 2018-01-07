@@ -12,7 +12,7 @@ import de.fred4jupiter.function.uppercase.service.UppercaseService;
 @Component("uppercaseFunction")
 public class UppercaseFunction implements Function<UppercaseRequest, UppercaseResponse> {
 
-	private static final Logger LOG = LoggerFactory.getLogger(UppercaseFunction.class);
+	private static final Logger logger = LoggerFactory.getLogger(UppercaseFunction.class);
 
 	private final UppercaseService uppercaseService;
 
@@ -23,7 +23,7 @@ public class UppercaseFunction implements Function<UppercaseRequest, UppercaseRe
 
 	@Override
 	public UppercaseResponse apply(final UppercaseRequest uppercaseRequest) {
-		LOG.debug("called function...");
+		logger.debug("called function...");
 		final UppercaseResponse result = new UppercaseResponse();
 
 		result.setResult(uppercaseService.uppercase(uppercaseRequest.getInput()));
