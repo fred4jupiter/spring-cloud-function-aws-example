@@ -23,7 +23,7 @@ public class UppercaseFunction implements Function<UppercaseRequest, UppercaseRe
 
 	@Override
 	public UppercaseResponse apply(final UppercaseRequest uppercaseRequest) {
-		logger.debug("called function...");
+		logger.debug("called function 'uppercaseFunction' ...");
 		final UppercaseResponse result = new UppercaseResponse();
 
 		result.setResult(uppercaseService.uppercase(uppercaseRequest.getInput()));

@@ -2,7 +2,7 @@
 
 Example application for Spring Cloud Function implementing an AWS Lambda function.
 
-## Setings on function upload
+## Settings on function upload
 
 Use this function handler name
 
@@ -12,8 +12,11 @@ de.fred4jupiter.function.uppercase.handler.aws.UppercaseFunctionHandler
 
 Under Basic Settings use this:
 
+- Runtime: Java 8
 - Memory: 192 MB
 - Timeout: 1 min
+
+Upload the `spring-cloud-function-aws-example-1.0.0-SNAPSHOT-aws.jar` artefact to AWS. 
 
 ## Test request
 

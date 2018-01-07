@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration status="warn">
-	<appenders>			
+<configuration status="warn" packages="com.amazonaws.services.lambda.runtime.log4j2.LambdaAppender">
+	<appenders>
+		<Lambda name="lambdaAppender">
+			<PatternLayout>
+				<pattern>%d{yyyy-MM-dd HH:mm:ss} %X{AWSRequestId} %-5p %c{1}:%L - %m%n</pattern>
+			</PatternLayout>
+		</Lambda>
+
 		<Console name="consoleAppender" target="SYSTEM_OUT">
 			<PatternLayout pattern="%d %p [%c] - %m%n" />
 		</Console>
@@ -8,10 +14,11 @@
 
 	<loggers>
 		<logger name="org.springframework" level="WARN" />
-		
+
 		<logger name="de.fred4jupiter.function.uppercase" level="DEBUG" />
 
 		<root level="INFO">
+			<appender-ref ref="lambdaAppender" />
 			<appender-ref ref="consoleAppender" />
 		</root>
 	</loggers>
